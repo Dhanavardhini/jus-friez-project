@@ -1,0 +1,94 @@
+.navbar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 64px !important;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-weight: bold;
+  color: #d32f2f;
+  line-height: 1;
+}
+
+.logo-subtext {
+  font-size: 0.75rem;
+  color: #ff9800;
+  margin-top: 2px;
+}
+
+/* Container holding nav links + delivery info */
+.nav-links-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-button {
+  color: #000;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: none;
+  padding: 6px 8px;
+}
+
+/* Delivery info */
+.delivery-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delivery-text {
+  font-size: 0.75rem;
+  color: #ff9800;
+  line-height: 1;
+}
+
+.phone-number {
+  font-weight: bold;
+  color: #000;
+  font-size: 1rem;
+}
+
+/* Hide nav links and delivery box on smaller screens */
+@media (max-width: 950px) {
+  .nav-links-container {
+    display: none;
+  }
+}
+
+/* Show menu icon only on small screens */
+.MuiIconButton-root {
+  display: none; /* Hide by default */
+}
+
+@media (max-width: 950px) {
+  .MuiIconButton-root {
+    display: block; /* Show hamburger menu */
+  }
+}
