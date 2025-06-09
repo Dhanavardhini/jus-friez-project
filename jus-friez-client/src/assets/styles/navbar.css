@@ -18,22 +18,22 @@
 }
 
 .navbar-toolbar {
-  display: flex !important;
+display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
   padding: 0px 0px 0px 20px !important;
   font-family: var(--font-family-primary);
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* ✅ keep all in one line */
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
 }
 
 .left-side {
-  display: flex;
+   display: flex;
   align-items: center;
   gap: 12px;
-  width: 50vw;
+  flex-shrink: 0; /* ✅ prevents logo area from shrinking */
   padding-left: 20px;
 }
 
@@ -69,20 +69,22 @@
 
 
 .right-side {
-  display: flex;
+ display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px 22px;
   border-radius: 70px 0 0 0;
-  width: 50vw;
+  flex: 1; /* ✅ allow it to grow within the space */
   justify-content: flex-end;
   margin: 0;
+  min-width: 0; /* ✅ allow content to shrink to fit */
 }
 
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 16px; /* ✅ reduced gap to prevent wrap */
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .nav-button-home,
@@ -141,7 +143,7 @@
 }
 
 .phone-number {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold) !important;
   font-size: 1rem;
 }
 
@@ -172,6 +174,16 @@
     width: auto;
     justify-content: flex-end;
   }
+  .logo-text {
+  font-family: 'Pacifico', 'Comic Sans MS', cursive !important;
+  font-weight: var(--font-weight-bold) !important;
+
+}
+
+.logo-subtext {
+  font-family: 'Pacifico', 'Comic Sans MS', cursive !important;
+}
+
 
   .left-side {
     width: auto;

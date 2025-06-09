@@ -74,10 +74,10 @@ const Navbar = () => {
         <ShoppingCartIcon sx={{ color: 'white' }} />
         <Box>
           <Typography sx={{ fontSize: '0.75rem', fontWeight: 'bold' }}>
-            Get Free Delivery
+            Delivered Fast
           </Typography>
           <Typography sx={{ fontWeight: 'bold', fontSize: '1rem' }}>
-            +12 123 4567 891
+            +91 98407 24068
           </Typography>
         </Box>
       </Box>
@@ -124,8 +124,8 @@ const Navbar = () => {
             <Box className="delivery-box" onClick={scrollToFooter}>
               <img src={dlogo} alt="Delivery" className="delivery-logo" />
               <Box>
-                <Typography className="delivery-text">Get Free Delivery</Typography>
-                <Typography className="phone-number">+12 123 4567 891</Typography>
+                <Typography className="delivery-text">Delivered Fast</Typography>
+                <Typography className="phone-number">+91 98407 24068</Typography>
               </Box>
             </Box>
           </Box>
