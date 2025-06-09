@@ -1,58 +1,75 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // import Bootstrap styles
-import logo1 from '../assets/a1.jpg';
+
+import '../assets/styles/HomePage.css';
+import logo1 from '../assets/Artboard 7.png';
+import logo2 from '../assets/Deliverylogo1.png';
+import left from '../assets/homepage.png';
+import left1 from '../assets/homeleft.png';
+import React, { useState, useEffect } from 'react';
+
+
 
 const HomePage = () => {
+  const [isLgOrBelow, setIsLgOrBelow] = useState(window.innerWidth <= 992);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsLgOrBelow(window.innerWidth <= 992);
+  };
+
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+
   return (
-    <div className="container-fluid my-5">
-      <div className="row align-items-center">
-        
-        {/* 3 cols - Left Image */}
-        <div className="col-md-3">
-          <img
-            src={logo1}  // replace with your real image path
-            alt="Left Visual"
-            className="img-fluid rounded"
-          />
-        </div>
-        
-        {/* 5 cols - Text content */}
-        <div className="col-md-4">
-          <h6 className="mb-2">Enjoy your day</h6>
-          <h3 className="mb-3">with our delicious food</h3>
-          <p className="mb-4" style={{ maxWidth: '400px' }}>
-            It is a long established fact that a est reader will be distracted.
-          </p>
+    <div className="container-fluid container-fluid-home">
+      <div className="row align-items-center flex-wrap">
 
-          <button className="btn btn-danger pencil-btn mb-4">
-            30% OFF
-          </button>
+  {/* Right Image (will become left on lg and below) */}
+  <div className="col-12 col-lg-5 order-1 order-lg-3 p-0 m-0 d-flex justify-content-center justify-content-lg-end mt-3 mt-lg-0">
+    <div className="right-image-wrapper">
+      <img src={logo1} alt="Right Visual" className="big-home-img" />
+    </div>
+  </div>
 
-          <div className="d-flex align-items-center gap-3">
-            <img
-              src={logo1}  // replace with your small image
-              alt="Small visual"
-              className="img-fluid"
-              style={{ width: '50px', height: '50px' }}
-            />
-            <div>
-              <p className="mb-1" style={{ color: '#ff9800', fontWeight: 'bold', marginBottom: 0 }}>
-                Get Free Delivery
-              </p>
-              <p className="mb-0" style={{ fontWeight: 'bold' }}>+12 123 4567 891</p>
-            </div>
-          </div>
-        </div>
-        
-        {/* 4 cols - Right Image */}
-        <div className="col-md-5">
-          <img
-            src={logo1}  // replace with your right image
-            alt="Right Visual"
-            className="img-fluid rounded"
-          />
-        </div>
+  {/* Center Text */}
+  <div className="col-12 col-lg-5 text-lg-start text-center order-2 order-lg-2 mt-4 mt-lg-0">
+    <h6 className="home-h6">Bite Into Happiness</h6>
+    <h5 className="home-h3">Delight in every bite at Jus Friez – where flavor meets fun</h5>
+    <p className="home-p home-description mx-auto mx-lg-0">
+      Delight in every bite at Jus Friez — crispy fries, cheesy burgers, spicy momos, and more made fresh just for you
+    </p>
+
+    {/* 30% OFF Badge */}
+    {/* <span className="">Order Now</span> */}
+     <button
+  type="button"
+  className="offer-badge text-center border-none"
+  onClick={() => window.location.href = "https://www.swiggy.com/city/chennai/jus-friez-seethammal-extension-teynampet-rest1075205"}
+>
+  Order Now
+</button>
+
+
+    <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-1 mt-0">
+      <img src={logo2} alt="Delivery" className="img-fluid home-small-img" />
+      <div className="get-delivery text-lg-start text-center">
+        <p>Get Free Delivery</p>
+        <p>+12 123 4567 891</p>
       </div>
+    </div>
+  </div>
+
+  {/* Left Image (will become right on lg and below) */}
+  <div className="col-12 col-lg-2 order-3 order-lg-1 mb-lg-0 mt-5 p-0 d-flex justify-content-center justify-content-lg-start animate-left-img">
+    <img
+      src={isLgOrBelow ? left1 : left}
+      alt="Left Visual"
+      className="img-fluid home-left-img"
+    />
+  </div>
+
+</div>
+
     </div>
   );
 };

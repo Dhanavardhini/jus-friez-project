@@ -1,96 +1,91 @@
- 
+
+
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // import Bootstrap styles
-import logo1 from '../assets/a1.jpg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../assets/styles/BestDeal.css';
+
+import bestDeal1 from '../assets/bestDeal1.png';
+import bestDeal from '../assets/Bestdeala1.png';
+import bestDeal2 from '../assets/bestdeal2.png';
+import sideImage from '../assets/bestright.png';
+
+const dealItems = [
+  {
+    title: "Salted French Friez Bucket",
+    description: "250g/500g of french friez salted with tangy tomato sauce",
+    tags: "Tasty · Juicy · Affordable",
+    image: bestDeal1,
+  },
+  {
+    title: "Zesty Jalapeno Nacho Chips",
+    description: "Double layered crispy jalapeno chips with cheese and jalapeno dressing, seasoned with herbs and served with classic mayo, salsa",
+    tags: "Veg · Spicy · Filling",
+    image: bestDeal2,
+  },
+];
 
 const BestDeal = () => {
   return (
-    <div className="container-fluid my-5">
-      <div className="row align-items-center">
-        
-        {/* 3 cols - Left Image */}
-        <div className="col-md-5">
-          <img
-            src={logo1}  // replace with your real image path
-            alt="Left Visual"
-            className="img-fluid rounded"
-          />
-        </div>
-        
-      {/* 4 cols - Text content */}
-<div className="col-md-4">
-  <h6 className="mb-2">Today's</h6>
-  <h3 className="mb-3">Best Deal, grab it as Soon</h3>
-  <p className="mb-4" style={{ maxWidth: '400px' }}>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi odit at eius. In accusantium tempore placeat doloremque quod quae voluptatem, rem rerum, quo corporis non repellendus voluptatibus autem quis reiciendis.
-  </p>
+    <div className="container-fluid container-fluid-deal">
+      <div className="row align-items-center flex-wrap flex-lg-row flex-column">
 
-  {/* Card Component */}
-  <div className="card shadow-sm border mb-3" style={{ backgroundColor: '#f9f9f9' }}>
-    <div className="row g-0 align-items-center">
-      {/* Image - 2 columns */}
-      <div className="col-2">
-        <img
-          src="/assets/burger.jpg"  // Replace with your burger image path
-          alt="Chicken Burger"
-          className="img-fluid rounded-start"
-        />
-      </div>
-
-      {/* Text - 10 columns */}
-      <div className="col-10">
-        <div className="card-body py-2">
-          <h6 className="card-title mb-1">Chicken Burger</h6>
-          <p className="card-text mb-1" style={{ fontSize: '0.85rem' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <p className="card-text" style={{ fontSize: '0.75rem', color: '#888' }}>
-            Tasty · Juicy · Affordable
-          </p>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div className="card shadow-sm border mb-3" style={{ backgroundColor: '#f9f9f9' }}>
-    <div className="row g-0 align-items-center">
-      {/* Image - 2 columns */}
-      <div className="col-2">
-        <img
-          src="/assets/burger.jpg"  // Replace with your burger image path
-          alt="Chicken Burger"
-          className="img-fluid rounded-start"
-        />
-      </div>
-
-      {/* Text - 10 columns */}
-      <div className="col-10">
-        <div className="card-body py-2">
-          <h6 className="card-title mb-1">Chicken Burger</h6>
-          <p className="card-text mb-1" style={{ fontSize: '0.85rem' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <p className="card-text" style={{ fontSize: '0.75rem', color: '#888' }}>
-            Tasty · Juicy · Affordable
-          </p>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-
-  <button> Order Now</button>
+        {/* Left Image */}
+        <div className="col-lg-5 mb-4 d-flex justify-content-center justify-content-lg-start">
+  <img
+    src={bestDeal}
+    alt="Left Visual"
+    className="img-fluid img-big-deal"
+  />
 </div>
 
-        
-        {/* 4 cols - Right Image */}
-        <div className="col-md-3">
+
+        {/* Text & Cards */}
+        <div className="col-lg-5 text-lg-start text-center mt-4 mt-lg-0 order-2">
+          <h6 className="text-muted">Today's</h6>
+          <h3 className="deal-heading">Best Deal, grab it as Soon</h3>
+          <p className="deal-description mx-auto">
+            Don't miss our delicious deals crafted with quality and taste. Perfect for your cravings!
+          </p>
+
+          {dealItems.map((item, index) => (
+            <div className="card deal-card mx-md-0 mx-auto" key={index}>
+              <div className="d-flex flex-column flex-md-row align-items-center">
+                <div className="deal-img-container ms-4 mb-2 mb-md-0 me-md-3 text-center">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="img-fluid"
+                    style={{ width: '110px', height: '90px', objectFit: 'contain' }}
+                  />
+                </div>
+                <div className="card-body text-md-start text-center">
+                  <h6 className="card-title mb-1">{item.title}</h6>
+                  <p className="card-text small mb-1">{item.description}</p>
+                  <p className="card-text tiny text-muted">{item.tags}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          <button
+            className="btn order-btn-alt mt-3 w-md-auto w-20"
+            onClick={() =>
+              window.location.href = "https://www.swiggy.com/city/chennai/jus-friez-seethammal-extension-teynampet-rest1075205"
+            }
+          >
+            Order Now
+          </button>
+        </div>
+
+        {/* Right Image */}
+        <div className="col-lg-2 d-flex justify-content-center justify-content-lg-end order-3 mt-4 mt-lg-0">
           <img
-            src={logo1}  // replace with your right image
+            src={sideImage}
             alt="Right Visual"
-            className="img-fluid rounded"
+            className="img-fluid"
           />
         </div>
+
       </div>
     </div>
   );

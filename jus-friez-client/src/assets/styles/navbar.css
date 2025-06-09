@@ -1,19 +1,46 @@
-.navbar-toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 64px !important;
+:root {
+  --red-color: #d32f2f;
+  --yellow-color: #cc5200;
+  /* --blue-color: #cc5200; */
+  --white-color: #fff;
+  --text-color: #000;
+  /* --font-family-primary: 'Poppins', sans-serif; */
+  /* --font-family-logo: 'Merriweather', serif; */
+  --font-weight-bold: bold;
 }
 
-.logo-container {
+.navbar-appbar {
+  background-color: var(--white-color) !important;
+  width: 100%;
+  overflow-x: hidden;
+  z-index: 1300;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toolbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0px 0px 0px 20px !important;
+  font-family: var(--font-family-primary);
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.left-side {
   display: flex;
   align-items: center;
+  gap: 12px;
+  width: 50vw;
+  padding-left: 20px;
 }
 
 .logo-flex {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .logo-img {
@@ -24,71 +51,131 @@
 }
 
 .logo-text {
-  font-weight: bold;
-  color: #d32f2f;
-  line-height: 1;
+  font-family: 'Pacifico', 'Comic Sans MS', cursive !important;
+  font-weight: var(--font-weight-bold) !important;
+  font-size: 1.7rem !important;
+  color: var(--red-color);
+  margin-bottom: 0.2rem; /* reduce space below the title */
+  line-height: 1.1; /* tighter line height */
 }
 
 .logo-subtext {
-  font-size: 0.75rem;
-  color: #ff9800;
-  margin-top: 2px;
+  font-family: 'Pacifico', 'Comic Sans MS', cursive !important;
+  font-size: 0.95rem !important;
+  color: var(--red-color);
+  margin-top: 0; /* remove top margin */
+  line-height: 1.1; /* tighter line height */
 }
 
-/* Container holding nav links + delivery info */
-.nav-links-container {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
 
-/* Navigation links */
-.nav-links {
-  display: flex;
-  gap: 12px;
-}
-
-.nav-button {
-  color: #000;
-  font-weight: 500;
-  font-size: 1rem;
-  text-transform: none;
-  padding: 6px 8px;
-}
-
-/* Delivery info */
-.delivery-box {
+.right-side {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 10px 22px;
+  border-radius: 70px 0 0 0;
+  width: 50vw;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-button-home,
+.nav-button-other,
+.nav-button-active {
+  font-family: var(--font-family-primary) !important;
+  font-weight: var(--font-weight-bold) !important; /* ✅ BOLD */
+  font-size: 1.2rem;
+  background-color: transparent !important;
+  color: var(--text-color) !important;
+  text-transform: none;
+  transition: all 0.3s ease;
+}
+
+.nav-button-home:hover,
+.nav-button-other:hover ,.delivery-text:hover {
+  color: var(--red-color)  !important;
+}
+
+.nav-button-active {
+  color: var(--red-color) !important;
+}
+
+/* ✅ Drawer styles also in bold */
+.drawer-home,
+.drawer-other,
+.drawer-active {
+  font-family: var(--font-family-primary);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold); /* ✅ BOLD */
+  color: var(--text-color);
+}
+
+.drawer-active {
+  color: var(--red-color);
+}
+
+.delivery-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.delivery-logo {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  border-radius: 10%;
 }
 
 .delivery-text {
-  font-size: 0.75rem;
-  color: #ff9800;
-  line-height: 1;
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-bold) !important;
+  color: var(--red-color);
 }
 
 .phone-number {
-  font-weight: bold;
-  color: #000;
+  font-weight: var(--font-weight-bold);
   font-size: 1rem;
 }
 
-/* Hide nav links and delivery box on smaller screens */
-@media (max-width: 950px) {
-  .nav-links-container {
-    display: none;
+.menu-icon {
+  display: none !important;
+  color: var(--text-color) !important;
+  font-size: 45px !important;
+  margin-left: auto;
+}
+
+/* ✅ Responsive for lg and below */
+@media (max-width: 1199px) {
+  .menu-icon {
+    display: block !important;
+    font-size: 40px !important;
+    margin-right: 30px !important;
   }
-}
 
-/* Show menu icon only on small screens */
-.MuiIconButton-root {
-  display: none; /* Hide by default */
-}
+  .nav-links,
+  .delivery-box {
+    display: none !important;
+  }
 
-@media (max-width: 950px) {
-  .MuiIconButton-root {
-    display: block; /* Show hamburger menu */
+  .right-side {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0;
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .left-side {
+    width: auto;
+    flex: none;
+    gap: 10px;
   }
 }

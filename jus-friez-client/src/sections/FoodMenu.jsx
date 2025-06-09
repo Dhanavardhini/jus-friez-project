@@ -1,83 +1,160 @@
+
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../assets/styles/FoodMenu.css';
+
+// Import images correctly here, so Vite can resolve them
+import FrenchFriezBuckets from "../assets/French Friez Buckets.png";
+import VegFriezBuckets from "../assets/Veg Friez Buckets.png";
+import ChickenLollipopBucket from "../assets/Chicken Lollipop Bucket.jpg";
+import Maggi from "../assets/Maggi.png";
+import PunjabiSamosa from "../assets/Punjabi Samosa.png";
+import VegMomoBucket from "../assets/Veg Momo Bucket.png";
+import ChickenSpringRolls from "../assets/Chicken_Spring_Rolls.png";
+import burger from "../assets/burger.jpg";
+import keyburger from "../assets/key burger4.png";
+
+const categories = [
+  { icon: FrenchFriezBuckets, label: 'French Friez Buckets' },
+  { icon: VegFriezBuckets, label: 'Veg Friez Buckets' },
+  { icon: ChickenLollipopBucket, label: 'Chicken Lollipop Bucket' },
+  { icon: Maggi, label: 'Maggi' },
+  { icon: PunjabiSamosa, label: 'Punjabi Samosa' },
+  { icon: VegMomoBucket, label: 'Veg Momo Bucket' },
+];
 
 const FoodMenu = () => {
   return (
     <div className="container my-5 text-center">
-      {/* Title */}
-      <h2 className="mb-2">Food Items</h2>
+      {/* Heading Section */}
+      <div className="mx-auto mb-5" style={{ maxWidth: '600px' }}>
+        <h5 className=" fw-bold">Food Item's</h5>
+        <h2 className="fw-bold mb-3" style={{ color: '#d32f2f' }}>Popular Menu</h2>
+        <p className="text-muted">
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using
+        </p>
+      </div>
 
-      {/* Subtitle */}
-      <h4 className="mb-3 text-danger">Popular Menu</h4>
-
-      {/* Paragraph */}
-      <p className="mb-5">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
-      </p>
-
-      {/* 6 Cards Row */}
-      <div className="row">
-        {[...Array(6)].map((_, index) => (
-          <div className="col-md-4 col-lg-2 mb-4" key={index}>
-            <div className="card h-100 shadow-sm border-0">
+      {/* Category Tabs */}
+      {/* <div className="row justify-content-center flex-wrap mb-5">
+        {categories.map((item, idx) => (
+          <div className="col-12 col-lg-auto mb-3" key={idx}>
+            <div className="category-card text-center">
               <img
-                src={`/assets/food${index + 1}.jpg`}
-                className="card-img-top"
-                alt={`Food ${index + 1}`}
-                style={{ height: '120px', objectFit: 'cover' }}
+                src={item.icon}
+                alt={item.label}
+                style={{ height: '90px', width: '90px', objectFit: 'cover' }}
               />
-              <div className="card-body p-2">
-                <h6 className="card-title m-0">Food {index + 1}</h6>
-              </div>
+              <p className="mb-0">{item.label}</p>
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
 
-      {/* Bottom Section: 2 Cards Left, 1 Card Right */}
-      <div className="row mt-5 text-start">
-        {/* Left Side: 2 stacked cards */}
-        <div className="col-lg-8">
-          {[1, 2].map((num) => (
-            <div className="card mb-4 p-3 shadow-sm" key={num}>
-              <div className="row g-0 align-items-center">
-                <div className="col-md-4">
-                  <img
-                    src={`/assets/burger${num}.jpg`}
-                    className="img-fluid rounded"
-                    alt={`Chicken Burger ${num}`}
-                    style={{ height: '100px', objectFit: 'cover' }}
-                  />
-                </div>
-                <div className="col-md-8 ps-3">
-                  <h5 className="card-title mb-2">Chicken Burger</h5>
-                  <p className="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ex impedit quas.
-                  </p>
-                  <button className="btn btn-danger btn-sm">Order Now</button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+  <div className="row justify-content-center flex-wrap mb-5">
+  {categories.map((item, idx) => (
+    <div
+      className="col-12 col-lg-auto mb-3"
+      key={idx}
+      style={{ '--delay': `${idx * 0.15}s` }}
+    >
+      <div className="category-card text-center">
+        <img
+          src={item.icon}
+          alt={item.label}
+          style={{ height: '90px', width: '90px', objectFit: 'cover' }}
+        />
+        <p className="mb-0">{item.label}</p>
+      </div>
+    </div>
+  ))}
+</div>
 
-        {/* Right Side: 1 larger card */}
-        <div className="col-lg-4">
-          <div className="card p-3 shadow-sm h-100">
-            <img
-              src="/assets/burger3.jpg"
-              className="img-fluid rounded mb-3"
-              alt="Burger Special"
-              style={{ height: '180px', objectFit: 'cover' }}
-            />
-            <h5 className="card-title">Burger</h5>
-            <p className="card-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ex impedit quas.
-            </p>
-            <button className="btn btn-danger btn-sm">Order Now</button>
-          </div>
+
+
+
+   <div className="row g-4">
+  {/* Left: Two stacked cards */}
+  <div className="col-lg-6 ">
+    {/* First Card */}
+    <div className="mb-4 mt-4 mb-lg-3">
+      <div className="card p-3 shadow-sm d-flex flex-column flex-lg-row align-items-center text-center text-lg-start position-relative">
+        <div className="price-tag">$8</div>
+        <img
+          src={ChickenSpringRolls}
+          alt="Chicken Spring Rolls"
+          className="img-fluid rounded mb-3 mb-lg-0"
+          style={{ height: '130px', width: '130px', objectFit: 'cover' }}
+        />
+        <div className="ps-lg-3">
+          <h5 className="fw-bold">Chicken Spring Rolls</h5>
+          <p className="text-muted">A delicious crispy treat packed with chicken filling.</p>
+          <button
+            className="btn food-order btn-sm"
+            onClick={() =>
+              window.open(
+                "https://www.swiggy.com/city/chennai/jus-friez-seethammal-extension-teynampet-rest1075205",
+                "_blank"
+              )
+            }
+          >
+            Order Now
+          </button>
         </div>
       </div>
+    </div>
+
+    {/* Second Card */}
+    <div>
+      <div className="card p-3 mt-4 shadow-sm d-flex flex-column flex-lg-row align-items-center text-center text-lg-start position-relative">
+        <div className="price-tag">$6</div>
+        <img
+          src={burger}
+          alt="Hamburger"
+          className="img-fluid rounded mb-3 mb-lg-0"
+          style={{ height: '130px', width: '130px', objectFit: 'contain' }}
+        />
+        <div className="ps-lg-3">
+          <h5 className="fw-bold">Purple Pop</h5>
+          <p className="text-muted">Black current flavoured fizzy delight with a refreshing energy in every sip!</p>
+          <button
+            className="btn food-order btn-sm"
+            onClick={() =>
+              window.location.href =
+                "https://www.swiggy.com/city/chennai/jus-friez-seethammal-extension-teynampet-rest1075205"
+            }
+          >
+            Order Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Right: Tall card */}
+  <div className="col-lg-6">
+    <div className="card p-3 shadow-sm text-center text-lg-start d-flex flex-column position-relative h-100">
+      <div className="price-tag">$10</div>
+      <img
+        src={keyburger}
+        alt="Turkey Burgers"
+        className="img-fluid mb-3"
+        style={{ height: '230px', objectFit: 'contain' }}
+      />
+      <h5 className="fw-bold">Veg Friez Buckets</h5>
+      <p className="text-muted">10 /20pcs of a collection of cheesy fries consisting of cheesy corn nuggets potato cheese balls cheesy corn triangle cheesy pizza finger</p>
+      <button
+        className="btn food-order btn-sm"
+        onClick={() =>
+          window.location.href =
+            "https://www.swiggy.com/city/chennai/jus-friez-seethammal-extension-teynampet-rest1075205"
+        }
+      >
+        Order Now
+      </button>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };

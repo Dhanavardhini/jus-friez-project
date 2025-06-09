@@ -1,0 +1,28 @@
+.btn-warning.enjoy-btn {
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-warning.enjoy-btn:hover {
+  background-color: #e0a800; /* Slightly darker yellow/orange */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(224, 168, 0, 0.5);
+  cursor: pointer;
+}
+.enjoy-btn {
+  background-color: #d32f2f !important;
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.enjoy-btn:hover {
+  background-color: #b71c1c !important; /* slightly darker red on hover */
+}
+/* Ensure image is centered on lg and below */
+@media (max-width: 992px) {
+  .enjoy-image {
+    margin: 0 auto;
+    display: block;
+  }
+}
