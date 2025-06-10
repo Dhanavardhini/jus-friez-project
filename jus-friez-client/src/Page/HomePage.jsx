@@ -36,7 +36,7 @@ useEffect(() => {
     <h6 className="home-h6">Bite Into Happiness</h6>
     <h5 className="home-h3">Delight in every bite at Jus Friez – where flavor meets fun</h5>
     <p className="home-p home-description mx-auto mx-lg-0">
-      Delight in every bite at Jus Friez — crispy fries, cheesy burgers, spicy momos, and more made fresh just for you
+      Delight in every bite at Jus Friez — crispy fries, spicy momos, and more made fresh just for you
     </p>
 
     {/* 30% OFF Badge */}
@@ -54,7 +54,7 @@ useEffect(() => {
       <img src={logo2} alt="Delivery" className="img-fluid home-small-img" />
       <div className="get-delivery text-lg-start text-center">
         <p>Get Free Delivery</p>
-        <p>+12 123 4567 891</p>
+        <p>+91 98407 24068</p>
       </div>
     </div>
   </div>

@@ -41,10 +41,18 @@ const Footer = () => {
         <div className="row text-start">
           <div className="col-md-3 mb-4">
             <h5>Our Location</h5>
-            <p className="mb-1">Jus Friez Cafe | Alwarpet, Chennai</p>
+            {/* Jus Friez
+
+No.10/15, 2nd Cross St,
+Seethammal Extension,
+Teynampet, */}
+{/* Chennai - 600018 */}
+            <p className="mb-1">Jus Friez</p>
             <p className="mb-1">
-              Ground Floor, No.10/15, 2nd Cross St,<br />
-              Seethammal Extension, Teynampet, Chennai, Tamil Nadu 600018
+             No.10/15, 2nd Cross St,<br />
+Seethammal Extension,<br />
+Teynampet, <br />
+Chennai - 600018.<br />
             </p>
             <a
               href="https://www.google.com/maps/place/Jus+Friez,+Seethammal+Extension,+Teynampet,+Chennai"

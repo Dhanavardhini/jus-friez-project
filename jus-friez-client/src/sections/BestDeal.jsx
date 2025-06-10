@@ -12,13 +12,13 @@ import sideImage from '../assets/bestright.png';
 const dealItems = [
   {
     title: "Salted French Friez Bucket",
-    description: "250g/500g of french friez salted with tangy tomato sauce",
+    description: "100g of French friez salted with tangy tomato sauce",
     tags: "Tasty · Juicy · Affordable",
     image: bestDeal1,
   },
   {
     title: "Zesty Jalapeno Nacho Chips",
-    description: "Double layered crispy jalapeno chips with cheese and jalapeno dressing, seasoned with herbs and served with classic mayo, salsa",
+    description: "Double layered crispy Jalapeno chips and Jalapeno dressing  and served with classic mayo, salsa",
     tags: "Veg · Spicy · Filling",
     image: bestDeal2,
   },

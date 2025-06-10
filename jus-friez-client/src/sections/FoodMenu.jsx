@@ -141,7 +141,7 @@ const FoodMenu = () => {
         style={{ height: '230px', objectFit: 'contain' }}
       />
       <h5 className="fw-bold">Veg Friez Buckets</h5>
-      <p className="text-muted">10 /20pcs of a collection of cheesy fries consisting of cheesy corn nuggets potato cheese balls cheesy corn triangle cheesy pizza finger</p>
+      <p className="text-muted"> A collection of cheesy fries consisting of potato cheese balls cheesy corn triangle cheesy pizza finger</p>
       <button
         className="btn food-order btn-sm"
         onClick={() =>

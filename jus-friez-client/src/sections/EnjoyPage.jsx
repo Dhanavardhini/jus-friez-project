@@ -21,8 +21,8 @@ function EnjoyPage() {
 
         {/* Right - Text content */}
         <div className="col-md-7 text-center text-md-start">
-          <h2 className="mb-3 text-white">Enjoy 50% Off on Your Favorite Crispy Treats!</h2>
-          <p className="mb-4 text-white">Savor the crunch and flavor with our exclusive 50% discount on all your favorite fries, buckets, and snacks. Whether you're craving Veg Fries, Momos, or Zingy Pops, now's the perfect time to indulge and save big. Hurry, this tasty offer is just for you!</p>
+          <h2 className="mb-3 text-white">Enjoy 25% Off on Your Favorite Crispy Treats!</h2>
+          <p className="mb-4 text-white">Savor the crunch and flavor with our exclusive 25% discount on all your favorite fries, buckets, and snacks. Whether you're craving Veg Fries, Momos, now's the perfect time to indulge and save big. Hurry, this tasty offer is just for you!</p>
           {/* <button className="btn btn-warning fw-bold px-4 py-2">Enjoy Now</button> */}
         <button
   className="btn fw-bold px-4 py-2 mb-2 enjoy-btn"

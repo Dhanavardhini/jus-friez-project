@@ -9,19 +9,19 @@ import t3 from '../assets/avatar.png';
 import terminols from '../assets/terminols.png';
 const testimonialsData = [
   {
-    name: "Liza Kemi",
+    name: "Siva",
     rating: 5,
     text: "The crispy fries and flavorful snacks from Jus Friez never disappoint! Always fresh and delivered on time.",
     img: t1,
   },
   {
-    name: "John Doe",
+    name: "Abi",
     rating: 4,
     text: "Great taste and quick delivery. Jus Friez has become my go-to for delicious comfort food.",
     img: t2,
   },
   {
-    name: "Sarah Parker",
+    name: "Sneka",
     rating: 5,
     text: "Amazing service and mouth-watering dishes. I recommend Jus Friez to all my friends and family!",
     img: t3,
