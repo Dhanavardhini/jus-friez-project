@@ -18,7 +18,7 @@ const dealItems = [
   },
   {
     title: "Zesty Jalapeno Nacho Chips",
-    description: "Double layered crispy Jalapeno chips and Jalapeno dressing  and served with classic mayo, salsa",
+    description: "Crispy Jalapeno chips with mayo and salsa",
     tags: "Veg · Spicy · Filling",
     image: bestDeal2,
   },
@@ -47,25 +47,28 @@ const BestDeal = () => {
             Don't miss our delicious deals crafted with quality and taste. Perfect for your cravings!
           </p>
 
-          {dealItems.map((item, index) => (
-            <div className="card deal-card mx-md-0 mx-auto" key={index}>
-              <div className="d-flex flex-column flex-md-row align-items-center">
-                <div className="deal-img-container ms-4 mb-2 mb-md-0 me-md-3 text-center">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="img-fluid"
-                    style={{ width: '110px', height: '90px', objectFit: 'contain' }}
-                  />
-                </div>
-                <div className="card-body text-md-start text-center">
-                  <h6 className="card-title mb-1">{item.title}</h6>
-                  <p className="card-text small mb-1">{item.description}</p>
-                  <p className="card-text tiny text-muted">{item.tags}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+       {dealItems.map((item, index) => (
+  <div className="card deal-card mx-md-0 mx-auto" key={index}>
+    <div className="d-flex align-items-center">
+      <div className="deal-img-container ms-4 me-3 text-center">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="img-fluid"
+          style={{ width: '110px', height: '90px', objectFit: 'contain' }}
+        />
+      </div>
+      <div className="card-body p-2">
+        <p className="deal-inline-text mb-0">
+          <strong>{item.title}</strong><br />
+          {item.description}<br />
+          <span className="text-muted">{item.tags}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+))}
+
 
           <button
             className="btn order-btn-alt mt-3 w-md-auto w-20"

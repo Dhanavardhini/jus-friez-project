@@ -52,10 +52,16 @@ useEffect(() => {
 
     <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-1 mt-0">
       <img src={logo2} alt="Delivery" className="img-fluid home-small-img" />
-      <div className="get-delivery text-lg-start text-center">
+      {/* <div className="get-delivery text-lg-start text-center">
         <p>Get Free Delivery</p>
-        <p>+91 98407 24068</p>
-      </div>
+        <p><a href="tel:+919840724068">+91 98407 24068</a></p>
+         
+      </div> */}
+      <div className="get-delivery text-lg-start text-center">
+  <p>Get Free Delivery</p>
+  <p><a href="tel:+919840724068">+91 98407 24068</a></p>
+</div>
+
     </div>
   </div>
 

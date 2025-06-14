@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 :root {
   --red-color: #d32f2f;
   --yellow-color: #cc5200;
   /* --blue-color: #cc5200; */
   --white-color: #fff;
   --text-color: #000;
-  /* --font-family-primary: 'Poppins', sans-serif; */
+  --font-family-primary: "Merriweather", serif;
   /* --font-family-logo: 'Merriweather', serif; */
   --font-weight-bold: bold;
 }
@@ -174,15 +175,15 @@ display: flex !important;
     width: auto;
     justify-content: flex-end;
   }
-  .logo-text {
+  /* .logo-text {
   font-family: 'Pacifico', 'Comic Sans MS', cursive !important;
   font-weight: var(--font-weight-bold) !important;
 
-}
+} */
 
-.logo-subtext {
+/* .logo-subtext {
   font-family: 'Pacifico', 'Comic Sans MS', cursive !important;
-}
+} */
 
 
   .left-side {
@@ -190,4 +191,23 @@ display: flex !important;
     flex: none;
     gap: 10px;
   }
+  .logo-text {
+  /* font-family: 'Pacifico', 'Comic Sans MS', cursive !important; */
+font-family: var( --font-family-primary) !important;
+  font-weight: var(--font-weight-bold) !important;
+  font-size: 1.7rem !important;
+  color: var(--red-color);
+  margin-bottom: 0.2rem; /* reduce space below the title */
+  line-height: 1.1; /* tighter line height */
+}
+
+.logo-subtext {
+  /* font-family: 'Pacifico', 'Comic Sans MS', cursive !important; */
+font-family: var( --font-family-primary) !important;
+
+  font-size: 0.95rem !important;
+  color: var(--red-color);
+  margin-top: 0; /* remove top margin */
+  line-height: 1.1; /* tighter line height */
+}
 }

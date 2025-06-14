@@ -19,6 +19,10 @@
   --nav-padding: 10px 64px;
   --font-weight:bold;
 }
+body{
+  background-color:#fff8d2 !important;
+  /* background-color: rgb(217, 255, 217) !important; */
+}
 .navbar-toolbar {
   display: flex;
   justify-content: space-between;

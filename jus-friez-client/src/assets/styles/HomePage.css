@@ -33,6 +33,10 @@
 .home-description {
   /* max-width: 400px; */
 }
+.get-delivery a {
+  text-decoration: none; /* Remove underline */
+  color: #000000;         /* Make text black */
+}
 
 /* Offer Badge */
 .offer-badge {

@@ -27,7 +27,7 @@ function EnjoyPage() {
         <button
   className="btn fw-bold px-4 py-2 mb-2 enjoy-btn"
   onClick={() =>
-    window.location.href = "https://www.swiggy.com/city/chennai/jus-friez-seethammal-extension-teynampet-rest1075205"
+   window.location.href = "https://link.zomato.com/xqzv/rshare?id=108274900305631e5"
   }
 >
   Enjoy Now
