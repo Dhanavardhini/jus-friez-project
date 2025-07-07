@@ -75,7 +75,7 @@ Chennai - 600018.<br />
 
           <div className="col-md-3 mb-4">
             <h5>Working Hours</h5>
-            <p className="mb-1">Mon - Sun: 6:00 AM - 1:30 PM</p>
+            <p className="mb-1">Mon - Sun: 6:00 AM - 1:30 AM</p>
             {/* <p className="mb-1">Saturday: 10:00 AM - 5:00 PM</p> */}
             <a href="#home" onClick={scrollToHome} className="footer-link">
               Visit Us Today
